@@ -156,7 +156,7 @@ function showpretty(io::IO, val::Real,
        ty = typeof(val)
        throw(ErrorException("type $ty is not supported"))
     end   
-    showpretty(io, stringpretty(val, intGroup, fracGroup, intSep, fltSep))
+    show(io, stringpretty(val, intGroup, fracGroup, intSep, fltSep))
 end
 function showpretty(io::IO, val::Real)
     group, sep = fltsSpanned(), betweenFlts()

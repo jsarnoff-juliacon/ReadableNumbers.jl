@@ -408,7 +408,7 @@ betweenFlts(s::String) = betweenFlts!(s[1])
 # is this a type that can be handled above
 function prettyfiable{T<:Real}(val::T)
     try
-        convert(BigFloat,v); true
+        convert(BigFloat,val); true
     catch
         false
     end        

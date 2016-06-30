@@ -1,5 +1,6 @@
 ## ReadableNumbers.jl
 ###### easily read numbers with many digits
+__CORRECTED__
 
 To Install: `julia> Pkg.clone("https://github.com/jsarnoff-juliacon/ReadableNumbers.jl")`
 

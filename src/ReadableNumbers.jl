@@ -87,7 +87,7 @@ end
 
 function stringpretty(val::Real, 
           intGroup::Int, fracGroup::Int, intSep::Char, fltSep::Char)
-    if !prettyfiable(v)
+    if !prettyfiable(val)
        throw(ErrorException("type $T is not supported"))
     end   
     prettyFloat(string(val), intGroup, fracGroup, intSep, fltSep)
@@ -151,7 +151,7 @@ showpretty(io::IO, val::AbstractFloat, prettyFormat...) =
 
 function showpretty(io::IO, val::Real, 
           intGroup::Int, fracGroup::Int, intSep::Char, fltSep::Char)
-    if !prettyfiable(v)
+    if !prettyfiable(val)
        throw(ErrorException("type $T is not supported"))
     end   
     showpretty(io, stringpretty(val, intGroup, fracGroup, intSep, fltSep))

@@ -340,13 +340,12 @@ end
 function fractionalString(s::String, group::Int, span::Char)
     sfrac, sexponent =
         if contains(s,"e")
-           split(s,"e")
+           map(String, split(s,"e"))
         else
            s, ""
         end
 
-    revstr = string(reverse(sfrac))
-    pretty = reverse(nonnegIntegerString(revstr, group, span))
+    pretty = reverse(nonnegIntegerString(reverse(sfrac), group, span))
 
     if length(sexponent) != 0
        string(pretty,"e",sexponent)

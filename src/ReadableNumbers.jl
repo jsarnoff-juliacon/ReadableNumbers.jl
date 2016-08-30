@@ -274,7 +274,7 @@ prettyFloat(s::String, group::Int, span::Char) =
 prettyFloat(s::String, group::Int, intSep::Char, fltSep::Char) =
     prettyFloat(s, group, group, intSep, fltSep)
 
-prettyFloat(s::String, intsSpanned::Int, fracGroup::Int, span::Char) =
+prettyFloat(s::String, intGroup::Int, fracGroup::Int, span::Char) =
     prettyFloat(s, intGroup, fracGroup, span, span)
 
 # do the work

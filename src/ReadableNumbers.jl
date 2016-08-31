@@ -27,12 +27,17 @@ export
 #        (b) floats of abs() < 1.0 & the fractional part of float strings
 
 const charBetweenNums = '_'
-const lengthOfNumSpan =  3
+const charBetweenInts = ','
+const charBetweenFlts = '_'
 
-const ints_spanned = [ lengthOfNumSpan ]; intsSpanned() = ints_spanned[1]
-const between_ints = [ charBetweenNums ]; betweenInts() = between_ints[1]
-const flts_spanned = [ lengthOfNumSpan ]; fltsSpanned() = flts_spanned[1]
-const between_flts = [ charBetweenNums ]; betweenFlts() = between_flts[1]
+const lengthOfNumSpan =  3
+const lengthOfIntSpan =  3
+const lengthOfFltSpan =  5
+
+const ints_spanned = [ lengthOfIntSpan ]; intsSpanned() = ints_spanned[1]
+const between_ints = [ charBetweenInts ]; betweenInts() = between_ints[1]
+const flts_spanned = [ lengthOfFltSpan ]; fltsSpanned() = flts_spanned[1]
+const between_flts = [ charBetweenFlts ]; betweenFlts() = between_flts[1]
 
 
 #  make numeric strings easier to read

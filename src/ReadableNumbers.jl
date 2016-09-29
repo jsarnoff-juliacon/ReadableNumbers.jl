@@ -3,11 +3,6 @@ module ReadableNumbers
 import Base: parse
 
 
-if VERSION < v"0.5.0-"
-   typealias String AbstractString
-end
-
-#=
 export
   # generating and showing prettier numeric strings
       stringpretty, showpretty,
@@ -17,7 +12,6 @@ export
   # span size: the number of contiguous digits used to form a span
       numsSpanned , intsSpanned , fltsSpanned ,
       numsSpanned!, intsSpanned!, fltsSpanned!
-=#
 
 # module level control of numeric string formatting (span char, span size)
 #   span char and span size are each the only value within a const vector

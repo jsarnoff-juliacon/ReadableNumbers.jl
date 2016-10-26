@@ -113,9 +113,9 @@ function stringpretty(val::Real)
 end
 
 function stringpretty(val::String)
-    intgroup, fltgroup = intsSpanned(), fltsSpanned()
-    intsep, fltsep = betweenInts(), betweenFlts()
-    str = prettyFloat(val, int_group, flt_group, intsep, fltsep)
+    int_group, flt_group = intsSpanned(), fltsSpanned()
+    int_sep, flt_sep = betweenInts(), betweenFlts()
+    str = prettyFloat(val, int_group, flt_group, int_sep, flt_sep)
     return str
 end
 

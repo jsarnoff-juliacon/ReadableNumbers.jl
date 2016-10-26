@@ -112,6 +112,13 @@ function stringpretty(val::Real)
     stringpretty(val, group, group, sep, sep)
 end
 
+function stringpretty(val::String)
+    intgroup, fltgroup = intsSpanned(), fltsSpanned()
+    intsep, fltsep = betweenInts(), betweenFlts()
+    str = prettyFloat(val, int_group, flt_group, intsep, fltsep)
+    return str
+end
+
 # show easy-to-read numbers
 
 showpretty(io::IO, val::Signed, group::Int, sep::Char=betweenInts()) =
@@ -172,7 +179,14 @@ end
 showpretty(io::IO, val::Real, prettyFormat...) =
     print(io, stringpretty(val, prettyFormat...))
 
+showpretty(io::IO, val::String, prettyFormat...) =
+    print(io, stringpretty(val, prettyFormat...))
 
+function showpretty(io::IO, val::String)
+     str = stringpretty(val)
+     print(io, str)
+end
+  
 # show on STDOUT
 
 
@@ -218,6 +232,10 @@ showpretty(val::Real, sep::Char)  =
 showpretty(val::Real, prettyFormat...) =
     showpretty(Base.STDOUT, val, prettyFormat...)
 
+showpretty(val::String, prettyFormat...) =
+    showpretty(Base.STDOUT, val, prettyFormat...)
+showpretty(val::String) =
+    showpretty(Base.STDOUT, val)
 
 # accept integers and floats
 
